@@ -1,0 +1,154 @@
+{
+  "name": "Flower Shop Skills",
+  "intents": [
+    {
+      "intent": "goodbyes",
+      "examples": [
+        {
+          "text": "talk to you later"
+        },
+        {
+          "text": "talk to you soon"
+        },
+        {
+          "text": "c ya"
+        },
+        {
+          "text": "goodbye"
+        },
+        {
+          "text": "good bye"
+        },
+        {
+          "text": "bye"
+        }
+      ],
+      "description": ""
+    },
+    {
+      "intent": "greetings",
+      "examples": [
+        {
+          "text": "kia ora"
+        },
+        {
+          "text": "Hey"
+        },
+        {
+          "text": "hi"
+        },
+        {
+          "text": "hello"
+        },
+        {
+          "text": "hallo"
+        },
+        {
+          "text": "Good morning"
+        },
+        {
+          "text": "good evening"
+        }
+      ],
+      "description": ""
+    },
+    {
+      "intent": "thank_you",
+      "examples": [
+        {
+          "text": "appreciate it"
+        },
+        {
+          "text": "Jeez"
+        },
+        {
+          "text": "cheers"
+        },
+        {
+          "text": "tnx"
+        },
+        {
+          "text": "thx"
+        },
+        {
+          "text": "thank you"
+        },
+        {
+          "text": "Thanks"
+        }
+      ],
+      "description": ""
+    }
+  ],
+  "entities": [],
+  "language": "en",
+  "metadata": {
+    "api_version": {
+      "major_version": "v1",
+      "minor_version": "2018-09-20"
+    }
+  },
+  "skill_id": "b8ed1f4c-15e2-456e-b017-9e2dcd1acb2e",
+  "description": "A skill for a flower shop chain",
+  "dialog_nodes": [
+    {
+      "type": "standard",
+      "title": "Anything else",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "I didn't understand. You can try rephrasing."
+              },
+              {
+                "text": "Can you reword your statement? I'm not understanding."
+              },
+              {
+                "text": "I didn't get your meaning."
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "conditions": "anything_else",
+      "dialog_node": "Anything else",
+      "previous_sibling": "Welcome"
+    },
+    {
+      "type": "standard",
+      "title": "Welcome",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Hello. How can I help you?"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "conditions": "welcome",
+      "dialog_node": "Welcome"
+    }
+  ],
+  "workspace_id": "b8ed1f4c-15e2-456e-b017-9e2dcd1acb2e",
+  "counterexamples": [
+    {
+      "text": "kia ora"
+    }
+  ],
+  "system_settings": {
+    "tooling": {
+      "store_generic_responses": true
+    },
+    "spelling_auto_correct": true
+  },
+  "learning_opt_out": false,
+  "status": "Available"
+}
